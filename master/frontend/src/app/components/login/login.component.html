@@ -1,0 +1,22 @@
+<form [formGroup]="form" (ngSubmit)="auth.login(form.value)">
+<mat-sidenav-container fullscreen>
+  <div class="login-container">
+    <div class="center">
+      <img src="./assets/logo.png" class="margin-bottom-20" />
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Email" autofocus type="email" formControlName="email">
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Password" type="password" formControlName="password">
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button type="submit" color="accent">Login</button>
+    </div>
+  </div>
+</mat-sidenav-container>
+</form>
